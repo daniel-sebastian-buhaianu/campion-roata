@@ -1,2 +1,2 @@
-# campion-roata
-http://campion.edu.ro/arhiva/index.php?page=problem&action=view&id=1420
+# pbinfo-roata
+https://www.pbinfo.ro/probleme/1034/roata
