@@ -10,7 +10,7 @@ void citesteDateleDeIntrare(
 	int & nrCabine,
 	int & nrClienti,
 	int & nrClientiLaCoada,
-	int & sumaIncasata,
+	long long & sumaIncasata,
 	Cabina cabine[],
 	Client coadaClienti[]);
 bool compar(Cabina, Cabina);
@@ -18,8 +18,8 @@ int main()
 {
 	int nrCabine,
 	    nrClienti,
-	    nrClientiLaCoada,
-	    sumaIncasata;
+	    nrClientiLaCoada;
+	long long sumaIncasata;
 	Cabina cabine[NR_MAXIM_CABINE+1];
 	Client coadaClienti[NR_MAXIM_CLIENTI+1];
 	citesteDateleDeIntrare(
@@ -70,7 +70,7 @@ void citesteDateleDeIntrare(
 	int & nrCabine,
 	int & nrClienti,
 	int & nrClientiLaCoada,
-	int & sumaIncasata,
+	long long & sumaIncasata,
 	Cabina cabine[],
 	Client coadaClienti[])
 {
@@ -92,6 +92,10 @@ void citesteDateleDeIntrare(
 		sumaIncasata += client.nrRotiri;
 		client.nrOrdine = i;
 		coadaClienti[++nrClientiLaCoada] = client;
+	}
+	if (nrCabine > nrClienti)
+	{
+		nrCabine = nrClienti;
 	}
 	citeste.close();
 }
